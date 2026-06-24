@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "2fac21c7-cec6-4c0c-af1f-1c6cd9d8b4d5",
+    "Name": "Impresora",
+    "IP": "/dev/usb/lp0",
+    "Type": "USB",
+    "SerialMac": "",
+    "IsDefault": true
+  }
+]
