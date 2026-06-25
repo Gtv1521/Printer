@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"b0yzsDkyqvqZw66p8Eq7nOcTKT1QybUyXncZGFpGv14=","Source":"MiPrinter","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "iA7s6teagB6h/00wJFOgV4UsIJ79cZS7ag6mhDGkCNE=",
+  "Source": "MiPrinter",
+  "BasePath": "_content/MiPrinter",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

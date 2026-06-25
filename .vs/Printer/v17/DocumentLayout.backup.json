@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\Printer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF03033-37C9-520B-1683-B8F458E197ED}|MiPrinter.csproj|c:\\users\\ususario\\documents\\desarrollo\\printer\\service\\printer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF03033-37C9-520B-1683-B8F458E197ED}|MiPrinter.csproj|solutionrelative:service\\printer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF03033-37C9-520B-1683-B8F458E197ED}|MiPrinter.csproj|c:\\users\\ususario\\documents\\desarrollo\\printer\\controllers\\printcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF03033-37C9-520B-1683-B8F458E197ED}|MiPrinter.csproj|solutionrelative:controllers\\printcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF03033-37C9-520B-1683-B8F458E197ED}|MiPrinter.csproj|c:\\users\\ususario\\documents\\desarrollo\\printer\\interface\\iprints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF03033-37C9-520B-1683-B8F458E197ED}|MiPrinter.csproj|solutionrelative:interface\\iprints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF03033-37C9-520B-1683-B8F458E197ED}|MiPrinter.csproj|c:\\users\\ususario\\documents\\desarrollo\\printer\\service\\configprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF03033-37C9-520B-1683-B8F458E197ED}|MiPrinter.csproj|solutionrelative:service\\configprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PrintController.cs",
+              "DocumentMoniker": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\Printer\\Controllers\\PrintController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PrintController.cs",
+              "ToolTip": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\Printer\\Controllers\\PrintController.cs",
+              "RelativeToolTip": "Controllers\\PrintController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwFoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T03:54:39.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IPrints.cs",
+              "DocumentMoniker": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\Printer\\Interface\\IPrints.cs",
+              "RelativeDocumentMoniker": "Interface\\IPrints.cs",
+              "ToolTip": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\Printer\\Interface\\IPrints.cs",
+              "RelativeToolTip": "Interface\\IPrints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T03:48:20.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConfigPrint.cs",
+              "DocumentMoniker": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\Printer\\Service\\ConfigPrint.cs",
+              "RelativeDocumentMoniker": "Service\\ConfigPrint.cs",
+              "ToolTip": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\Printer\\Service\\ConfigPrint.cs",
+              "RelativeToolTip": "Service\\ConfigPrint.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAwA0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T02:00:08.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Printer.cs",
+              "DocumentMoniker": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\Printer\\Service\\Printer.cs",
+              "RelativeDocumentMoniker": "Service\\Printer.cs",
+              "ToolTip": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\Printer\\Service\\Printer.cs",
+              "RelativeToolTip": "Service\\Printer.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAYwIsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T23:55:32.375Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

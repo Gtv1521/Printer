@@ -5,6 +5,22 @@
     "IP": "/dev/usb/lp0",
     "Type": "USB",
     "SerialMac": "",
+    "IsDefault": false
+  },
+  {
+    "Id": "",
+    "Name": "POS-58C",
+    "IP": "USB001",
+    "Type": "USB",
+    "SerialMac": "",
+    "IsDefault": false
+  },
+  {
+    "Id": "",
+    "Name": "POS-58C",
+    "IP": "USB001",
+    "Type": "USB",
+    "SerialMac": "",
     "IsDefault": true
   }
 ]

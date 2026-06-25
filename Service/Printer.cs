@@ -20,12 +20,20 @@ using Zeroconf;
 using System.Drawing.Drawing2D;
 using Microsoft.OpenApi.Extensions;
 using SixLabors.ImageSharp.Processing.Processors;
+using System.Management;
+using System.Runtime.Versioning;
 
 namespace MiPrinter.Service
 {
     public class Printer : IPrints<Print, DataPrint>
     {
         private const int ESCPOS_PORT = 9100;
+        private readonly ConfigPrint _printer ;
+
+        public Printer(ConfigPrint printer)
+        {
+            _printer = printer;
+        }
 
         public Task<bool> DeletePrint(int id)
         {
@@ -106,8 +114,6 @@ namespace MiPrinter.Service
                     Footer
                );
 
-
-
                 if (Impresora?.Type == "NETWORK")
                 {
                     var printer = new ImmediateNetworkPrinter(
@@ -121,13 +127,22 @@ namespace MiPrinter.Service
                 }
                 else if (Impresora?.Type == "USB")
                 {
-                    System.IO.File.WriteAllBytes(
-                        Impresora.IP,
-                        impresion
-                    );
+                    if(OperatingSystem.IsLinux())
+                    {
+                        System.IO.File.WriteAllBytes(
+                            Impresora.IP,
+                            impresion
+                        );
+                    }
+                    else if (OperatingSystem.IsWindows())
+                    {
+                        Console.WriteLine("imprimir data", impresion);
+                        _printer.Imprimir(Impresora.Name, impresion);
+                    }
                 }
+
                 return true;
-            }
+            } 
             catch (Exception ex)
             {
                 Console.WriteLine($"Error printing: {ex.Message}");
@@ -220,8 +235,15 @@ namespace MiPrinter.Service
         {
             var printers = new List<Print>();
 
-            printers.AddRange(GetUsbPrinters());
-
+            if (OperatingSystem.IsWindows())
+            {
+                Console.WriteLine("Windows");
+                printers.AddRange(GetUsbPrintersWindows()); 
+            }
+            else if (OperatingSystem.IsLinux())
+            {
+                printers.AddRange(GetUsbPrinters());
+            }
             printers.AddRange(
                 await GetNetworkPrinters("192.168.1"));
 
@@ -285,6 +307,74 @@ namespace MiPrinter.Service
 
             return printers;
         }
+
+        [SupportedOSPlatform("windows")]
+        private List<Print> GetUsbPrintersWindows()
+        {
+            // 1. Inicializamos la lista igual que en tu método anterior
+            var printers = new List<Print>();
+
+            // 2. Usamos 'using' para asegurar que Windows libere la memoria de la consulta WMI
+            using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Printer"))
+            {
+                foreach (ManagementObject printer in searcher.Get())
+                {
+                    string name = printer["Name"]?.ToString()!;
+                    string port = printer["PortName"]?.ToString()!;
+
+                    // 3. Filtramos solo los puertos USB (USB001, USB002, etc.)
+                    if (port != null && port.StartsWith("USB", StringComparison.OrdinalIgnoreCase))
+                    {
+                        // 4. Mapeamos los datos exactamente a tu estructura de salida 'Print'
+                        printers.Add(new Print
+                        {
+                            Name = name ?? "Impresora Térmica",
+                            Type = "USB",
+                            IP = port // En impresoras locales USB, el puerto hace las veces de identificador físico
+                        });
+                    }
+
+                    // Liberamos el objeto individual del bucle
+                    printer.Dispose();
+                }
+            }
+
+            // 5. Retornamos la lista finalizada
+            return printers;
+        }
+
+        /// <summary>
+        /// Limpia el archivo de configuración de impresoras dejándolo como un arreglo vacío [].
+        /// </summary>
+        public async Task LimpiarArchivoPrintersAsync()
+        {
+            try
+            {
+                // 1. Aseguramos que la carpeta "config" exista antes de escribir, por seguridad
+                string? directoryPath = Path.GetDirectoryName(_filePath);
+                if (directoryPath != null && !Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                // 2. Sobrescribimos el archivo con la estructura de un array vacío
+                await File.WriteAllTextAsync(_filePath, "[]");
+
+                Console.WriteLine("El archivo printers.json ha sido limpiado correctamente.");
+            }
+            catch (IOException ex)
+            {
+                // Manejo de errores en caso de que el archivo esté siendo usado por otro proceso
+                Console.WriteLine($"Error de E/S al limpiar el archivo: {ex.Message}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error inesperado al limpiar el archivo: {ex.Message}");
+                throw;
+            }
+        }
+
 
 
         private async Task<Print?> BuscarPorIdAsync(string idBuscado)

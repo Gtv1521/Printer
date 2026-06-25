@@ -13,5 +13,6 @@ namespace MiPrinter.Interface
         Task<List<T>> GetAllPrints();
         Task<IEnumerable<T>> GetPrintsSave();
         Task<bool> SavePrint(T data);
+        Task LimpiarArchivoPrintersAsync();
     }
 }

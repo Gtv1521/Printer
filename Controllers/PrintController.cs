@@ -81,5 +81,20 @@ namespace MiPrinter.Controllers
                 return Problem(ex.Message);
             }
         }
+
+        [HttpGet("/clean_saved")]
+        public async Task<IActionResult> Clean()
+        {
+            try
+            {
+                await _print.LimpiarArchivoPrintersAsync();
+                return Ok(true);
+            }
+            catch (Exception ex) 
+            {
+                return Problem(ex.Message);
+            }
+
+        }
     }
 }

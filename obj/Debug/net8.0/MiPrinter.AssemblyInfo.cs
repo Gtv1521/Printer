@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiPrinter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85a77e32eca7e851d8dda97d72e4bfe52ec7e3ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiPrinter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiPrinter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
