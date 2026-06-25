@@ -132,11 +132,6 @@ C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\MiPrinter.MvcApp
 C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\MiPrinter.sourcelink.json
 C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets\msbuild.MiPrinter.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets\msbuild.build.MiPrinter.props
-C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MiPrinter.props
-C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MiPrinter.props
-C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\scopedcss\bundle\MiPrinter.styles.css
 C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\MiPrinter.csproj.Up2Date
 C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\MiPrinter.dll
@@ -147,3 +142,11 @@ C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\ref\MiPrinter.dl
 C:\Users\USUSARIO\Documents\Desarrollo\Printer\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\USUSARIO\Documents\Desarrollo\Printer\bin\Debug\net8.0\System.Management.dll
 C:\Users\USUSARIO\Documents\Desarrollo\Printer\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Management.dll
+C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\USUSARIO\Documents\Desarrollo\Printer\bin\Debug\net8.0\MiPrinter.staticwebassets.endpoints.json
+C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\USUSARIO\Documents\Desarrollo\Printer\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -228,7 +228,7 @@ namespace MiPrinter.Service
 
             File.WriteAllText(_filePath, jsonActualizado);
 
-            return true;
+            return await Task.FromResult(true);
         }
 
         public async Task<IEnumerable<Print>> ScanPrints()
@@ -264,6 +264,40 @@ namespace MiPrinter.Service
             var printers = JsonSerializer.Deserialize<List<Print>>(json);
 
             return printers ?? new List<Print>();
+        }
+
+        public async Task<bool> PrintAny(byte[] data)
+        {
+            var Impresora = await ObtenerImpresaraPorDefectoAsync();
+            if (Impresora?.IP == null) throw new FileNotFoundException("Impresora por defecto no hay");
+            if (Impresora?.Type == "NETWORK")
+            {
+                var printer = new ImmediateNetworkPrinter(
+                        new ImmediateNetworkPrinterSettings
+                        {
+                            ConnectionString = $"{Impresora.IP}:9100",
+                            PrinterName = Impresora.Name
+                        });
+
+                await printer.WriteAsync(data);
+            }
+            else if (Impresora?.Type == "USB")
+            {
+                if (OperatingSystem.IsLinux())
+                {
+                    System.IO.File.WriteAllBytes(
+                        Impresora.IP,
+                        data
+                    );
+                }
+                else if (OperatingSystem.IsWindows())
+                {
+                    Console.WriteLine("imprimir data", data);
+                    _printer.Imprimir(Impresora.Name, data);
+                }
+            }
+
+            return true;
         }
 
         private byte[] GenerarCuerpoObservaciones(IEnumerable<string> observaciones, EPSON e)

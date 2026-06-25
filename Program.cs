@@ -4,6 +4,9 @@ using MiPrinter.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var url = builder.Configuration["Urls"] ?? "http://localhost:5181";
+builder.WebHost.UseUrls(url);
+
 // Add services to the container.
 builder.Services.AddScoped<IPrints<Print, DataPrint>, Printer>();
 builder.Services.AddScoped<ConfigPrint>();

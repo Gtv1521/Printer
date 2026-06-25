@@ -96,5 +96,19 @@ namespace MiPrinter.Controllers
             }
 
         }
+
+        [HttpGet("/print_any")]
+        public async Task<IActionResult> PrintAnyAsync(byte[] data)
+        {
+            try
+            {
+                var response = await _print.PrintAny(data);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Failed to print {ex.Message}");
+            }
+        }
     }
 }
